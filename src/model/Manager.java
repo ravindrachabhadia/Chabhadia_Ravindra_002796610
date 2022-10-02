@@ -19,6 +19,18 @@ public class Manager {
    private String positionTitle;
    private int Number;
    private String EmailID;
+   private String Url;
+
+    public String getUrl() {
+        return Url;
+    }
+
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
+    
+    
 
     public String getName() {
         return name;
@@ -28,6 +40,7 @@ public class Manager {
         this.name = name;
     }
 
+    
   
 
     public int getAge() {
