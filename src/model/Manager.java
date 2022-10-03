@@ -17,7 +17,7 @@ public class Manager {
    private int level;
    private String teamInfo;
    private String positionTitle;
-   private int Number;
+   private String Number;
    private String EmailID;
    private String Url;
 
@@ -103,13 +103,15 @@ public class Manager {
         this.employeeId = employeeId;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return Number;
     }
 
-    public void setNumber(int Number) {
+    public void setNumber(String Number) {
         this.Number = Number;
     }
+
+    
 
     public String getEmailID() {
         return EmailID;
