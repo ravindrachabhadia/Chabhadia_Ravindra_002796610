@@ -75,7 +75,6 @@ public class PersonCreatePanel extends javax.swing.JPanel {
         TextPersonId = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         TextHouseId = new javax.swing.JTextField();
-        TextPersonGender = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         TextPersonFirstName = new javax.swing.JTextField();
@@ -93,6 +92,9 @@ public class PersonCreatePanel extends javax.swing.JPanel {
         TextPersonPassword = new javax.swing.JPasswordField();
         jLabel12 = new javax.swing.JLabel();
         communityCombo = new javax.swing.JComboBox<>();
+        TextPersonGender = new javax.swing.JComboBox<>();
+
+        setBackground(new java.awt.Color(0, 153, 255));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -106,22 +108,19 @@ public class PersonCreatePanel extends javax.swing.JPanel {
 
         jLabel5.setText("Gender");
 
-        TextPersonFirstName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextPersonFirstNameActionPerformed(evt);
-            }
-        });
         TextPersonFirstName.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TextPersonFirstNameKeyPressed(evt);
-            }
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                TextPersonFirstNameKeyReleased(evt);
             }
         });
 
         jLabel6.setText("Date of Birth");
 
+        TextPersonLastName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextPersonLastNameActionPerformed(evt);
+            }
+        });
         TextPersonLastName.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TextPersonLastNameKeyPressed(evt);
@@ -159,6 +158,8 @@ public class PersonCreatePanel extends javax.swing.JPanel {
             }
         });
 
+        TextPersonGender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Others" }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -192,9 +193,9 @@ public class PersonCreatePanel extends javax.swing.JPanel {
                     .addComponent(TextPersonPhoneNumber)
                     .addComponent(TextPersonAddress)
                     .addComponent(TextHouseId)
-                    .addComponent(TextPersonGender, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
                     .addComponent(TextPersonPassword)
-                    .addComponent(communityCombo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(communityCombo, 0, 139, Short.MAX_VALUE)
+                    .addComponent(TextPersonGender, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -215,9 +216,11 @@ public class PersonCreatePanel extends javax.swing.JPanel {
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TextPersonLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TextPersonGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(TextPersonGender)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -264,7 +267,7 @@ public class PersonCreatePanel extends javax.swing.JPanel {
        resource.setEmail(TextPersonEmail.getText());
        resource.setFirstName(TextPersonFirstName.getText());
        resource.setLastName(TextPersonLastName.getText());
-       resource.setGender(TextPersonGender.getText());
+       resource.setGender(TextPersonGender.getSelectedItem().toString());
        resource.setPhone(TextPersonPhoneNumber.getText());
        resource.setPassword(TextPersonPassword.getText());
        
@@ -278,7 +281,7 @@ public class PersonCreatePanel extends javax.swing.JPanel {
                  JOptionPane.showMessageDialog(null, "Invalid Email");
             return;
 }
-       
+        
        
        JOptionPane.showMessageDialog(this,"Successfully added");
         
@@ -289,7 +292,7 @@ public class PersonCreatePanel extends javax.swing.JPanel {
         TextPersonEmail.setText("");
         TextPersonFirstName.setText("");
         TextPersonLastName.setText("");
-        TextPersonGender.setText("");
+        //TextPersonGender.setText("");
         TextPersonPhoneNumber.setText("");
         TextPersonPassword.setText("");
        
@@ -334,24 +337,11 @@ public class PersonCreatePanel extends javax.swing.JPanel {
         }
         else
               TextPersonPhoneNumber.setBackground(Color.red);
-        
-        
-        
-        
     }//GEN-LAST:event_TextPersonPhoneNumberKeyReleased
-
-    private void TextPersonFirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextPersonFirstNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextPersonFirstNameActionPerformed
-
-    private void TextPersonFirstNameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TextPersonFirstNameKeyReleased
-        // TODO add your handling code here:
-   
-    }//GEN-LAST:event_TextPersonFirstNameKeyReleased
 
     private void TextPersonFirstNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TextPersonFirstNameKeyPressed
         // TODO add your handling code here:
-         char C = evt.getKeyChar();
+        char C = evt.getKeyChar();
         if (Character.isLetter(C)|| Character.isWhitespace(C) || Character.isISOControl(C)){
         
             TextPersonFirstName.setEditable(true);
@@ -364,8 +354,11 @@ public class PersonCreatePanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please Enter a Valid Name");
   
 }
-    
     }//GEN-LAST:event_TextPersonFirstNameKeyPressed
+
+    private void TextPersonLastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextPersonLastNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextPersonLastNameActionPerformed
 
     private void TextPersonLastNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TextPersonLastNameKeyPressed
         // TODO add your handling code here:
@@ -392,7 +385,7 @@ public class PersonCreatePanel extends javax.swing.JPanel {
     private javax.swing.JTextField TextPersonDOB;
     private javax.swing.JTextField TextPersonEmail;
     private javax.swing.JTextField TextPersonFirstName;
-    private javax.swing.JTextField TextPersonGender;
+    private javax.swing.JComboBox<String> TextPersonGender;
     private javax.swing.JTextField TextPersonId;
     private javax.swing.JTextField TextPersonLastName;
     private javax.swing.JPasswordField TextPersonPassword;

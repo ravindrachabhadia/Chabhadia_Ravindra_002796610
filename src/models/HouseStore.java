@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package model;
+package models;
 
 import java.util.ArrayList;
 
@@ -10,30 +10,30 @@ import java.util.ArrayList;
  *
  * @author Ravindra
  */
-public class DoctorStore {
+public class HouseStore {
     
-    private ArrayList<Doctor> store; 
+   private ArrayList<House> store; 
    
-   public DoctorStore() {
-       this.store = new ArrayList<Doctor>();
+   public HouseStore() {
+       this.store = new ArrayList<House>();
    }
 
-    public ArrayList<Doctor> getStore() {
+    public ArrayList<House> getStore() {
         return store;
     }
 
-    public void setStore(ArrayList<Doctor> store) {
+    public void setStore(ArrayList<House> store) {
         this.store = store;
     }
    
-    public Doctor addNewResource(){
+    public House addNewResource(){
         
-        Doctor newResource = new Doctor();
+        House newResource = new House();
         store.add(newResource);
         return newResource;
     }
     
-    public void deleteResource(Doctor resource) {
+    public void deleteResource(House resource) {
         store.remove(resource);
     }
     

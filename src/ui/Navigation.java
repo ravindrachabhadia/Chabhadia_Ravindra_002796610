@@ -117,7 +117,6 @@ public class Navigation extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        labelLogo = new javax.swing.JLabel();
         btnLogout = new javax.swing.JButton();
         btnCreateCity = new javax.swing.JButton();
         btnViewCity = new javax.swing.JButton();
@@ -143,10 +142,6 @@ public class Navigation extends javax.swing.JPanel {
         lblEncounters = new javax.swing.JLabel();
         btnEncountCreate = new javax.swing.JButton();
         btnEncountView = new javax.swing.JButton();
-
-        labelLogo.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
-        labelLogo.setForeground(new java.awt.Color(0, 153, 153));
-        labelLogo.setText("H2O");
 
         btnLogout.setText(" logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -308,8 +303,7 @@ public class Navigation extends javax.swing.JPanel {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(btnLogout)
                                     .addComponent(btnCreateCity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnViewCity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(labelLogo))
+                                    .addComponent(btnViewCity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addComponent(lblCity)
                                 .addComponent(lblHospital)
                                 .addComponent(btnHospCreate)
@@ -339,9 +333,7 @@ public class Navigation extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(labelLogo)
-                .addGap(21, 21, 21)
+                .addGap(64, 64, 64)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblCity)
@@ -506,7 +498,6 @@ public class Navigation extends javax.swing.JPanel {
     private javax.swing.JButton btnViewCity;
     private javax.swing.JButton btnVitalCreate;
     private javax.swing.JButton btnVitalView;
-    private javax.swing.JLabel labelLogo;
     private javax.swing.JLabel lblCity;
     private javax.swing.JLabel lblCommunity;
     private javax.swing.JLabel lblDoctor;

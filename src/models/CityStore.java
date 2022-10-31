@@ -2,38 +2,37 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package model;
+package models;
 
 import java.util.ArrayList;
 
 /**
  *
  * @author Ravindra
- */
-public class HospitalStore {
+ */public class CityStore {
     
-   private ArrayList<Hospital> store; 
+    private ArrayList<City> store; 
    
-   public HospitalStore() {
-       this.store = new ArrayList<Hospital>();
+   public CityStore() {
+       this.store = new ArrayList<City>();
    }
 
-    public ArrayList<Hospital> getStore() {
+    public ArrayList<City> getStore() {
         return store;
     }
 
-    public void setStore(ArrayList<Hospital> store) {
+    public void setStore(ArrayList<City> store) {
         this.store = store;
     }
    
-    public Hospital addNewResource(){
+    public City addNewResource(){
         
-        Hospital newResource = new Hospital();
+        City newResource = new City();
         store.add(newResource);
         return newResource;
     }
     
-    public void deleteResource(Hospital resource) {
+    public void deleteResource(City resource) {
         store.remove(resource);
     }
     

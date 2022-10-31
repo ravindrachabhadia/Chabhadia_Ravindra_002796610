@@ -6,29 +6,25 @@ package ui;
 
 import javax.swing.JOptionPane;
 import models.CityStore;
+import models.Community;
 import models.CommunityStore;
-import models.Hospital;
-import models.HospitalStore;
 
 /**
  *
  * @author Ravindra
  */
-public class HospCreatePanel extends javax.swing.JPanel {
+public class CommunityCreatePanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form HospCreatePanel
+     * Creates new form CommunityCreatePanel
      */
-    HospitalStore hospitalStore;
     CommunityStore communityStore;
-    
-    public HospCreatePanel(HospitalStore hospitalStore,
-    CommunityStore communityStore) {
+    CityStore cityStore;
+    public CommunityCreatePanel( CityStore cityStore , CommunityStore communityStore) {
         initComponents();
-    
-        this.hospitalStore = hospitalStore;
-        this.communityStore = communityStore;
         
+        this.communityStore = communityStore;
+        this.cityStore = cityStore;
     }
 
     /**
@@ -40,18 +36,34 @@ public class HospCreatePanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        TextHospId = new javax.swing.JTextField();
-        TextCommunityId = new javax.swing.JTextField();
-        TextHospName = new javax.swing.JTextField();
-        TextPassword = new javax.swing.JPasswordField();
-        btnSubmit = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        TextCityId = new javax.swing.JTextField();
+        TextCommunityId = new javax.swing.JTextField();
+        TextCommunityName = new javax.swing.JTextField();
+        TextPassword = new javax.swing.JPasswordField();
+        btnSubmit = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(0, 204, 204));
+        setBackground(new java.awt.Color(0, 153, 255));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Create Community");
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel2.setText("City Id");
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel3.setText("Community Id");
+
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel4.setText("Community Name");
+
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel5.setText("Password");
 
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -59,22 +71,6 @@ public class HospCreatePanel extends javax.swing.JPanel {
                 btnSubmitActionPerformed(evt);
             }
         });
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Create Hospital");
-
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("Hospital Id");
-
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText("Community Id");
-
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel4.setText("Hospital Name");
-
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel5.setText("Password");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -93,9 +89,9 @@ public class HospCreatePanel extends javax.swing.JPanel {
                 .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(TextHospId)
+                        .addComponent(TextCityId)
                         .addComponent(TextCommunityId)
-                        .addComponent(TextHospName)
+                        .addComponent(TextCommunityName)
                         .addComponent(TextPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
                     .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -108,7 +104,7 @@ public class HospCreatePanel extends javax.swing.JPanel {
                 .addGap(77, 77, 77)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(TextHospId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TextCityId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -116,7 +112,7 @@ public class HospCreatePanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(TextHospName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TextCommunityName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -129,27 +125,28 @@ public class HospCreatePanel extends javax.swing.JPanel {
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         // TODO add your handling code here:
-        Hospital resource = hospitalStore.addNewResource();
-
-        resource.setHospitalId(Integer.parseInt(TextHospId.getText()));
+         Community resource = communityStore.addNewResource();
+        
+        resource.setCityId(Integer.parseInt(TextCityId.getText()));
         resource.setCommunityId(Integer.parseInt(TextCommunityId.getText()));
 
-        resource.setName(TextHospName.getText());
+        resource.setName(TextCommunityName.getText());
         resource.setPassword(String.valueOf(TextPassword.getPassword()));
-
+        
         JOptionPane.showMessageDialog(this,"Successfully added");
-
-        TextHospId.setText("");
+        
+        TextCityId.setText("");
         TextCommunityId.setText("");
-        TextHospName.setText("");
+        TextCommunityName.setText("");
+        TextCommunityName.setText("");
         TextPassword.setText("");
     }//GEN-LAST:event_btnSubmitActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField TextCityId;
     private javax.swing.JTextField TextCommunityId;
-    private javax.swing.JTextField TextHospId;
-    private javax.swing.JTextField TextHospName;
+    private javax.swing.JTextField TextCommunityName;
     private javax.swing.JPasswordField TextPassword;
     private javax.swing.JButton btnSubmit;
     private javax.swing.JLabel jLabel1;

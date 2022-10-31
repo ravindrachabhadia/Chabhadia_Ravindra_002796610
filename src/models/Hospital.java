@@ -2,18 +2,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package model;
+package models;
 
 /**
  *
  * @author Ravindra
  */
-public class Community {
+public class Hospital {
     
+    private int hospitalId;
     private int communityId;
-    private int cityId;
     private String name;
-    private String Password;
+    private String password;
+
+    public int getHospitalId() {
+        return hospitalId;
+    }
+
+    public void setHospitalId(int hospitalId) {
+        this.hospitalId = hospitalId;
+    }
 
     public int getCommunityId() {
         return communityId;
@@ -21,14 +29,6 @@ public class Community {
 
     public void setCommunityId(int communityId) {
         this.communityId = communityId;
-    }
-
-    public int getCityId() {
-        return cityId;
-    }
-
-    public void setCityId(int cityId) {
-        this.cityId = cityId;
     }
 
     public String getName() {
@@ -40,16 +40,16 @@ public class Community {
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
-    public void setPassword(String Password) {
-        this.Password = Password;
+    public void setPassword(String password) {
+        this.password = password;
     }
     
     @Override
     public String toString() {
-        return String.valueOf(communityId) ;
+        return String.valueOf(hospitalId) ;
     }
     
 }

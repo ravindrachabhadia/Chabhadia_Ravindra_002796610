@@ -4,6 +4,7 @@
  */
 package ui;
 
+import javax.swing.JOptionPane;
 import models.CityStore;
 import models.CommunityStore;
 import models.DoctorStore;
@@ -18,10 +19,10 @@ import models.VitalSignsStore;
  *
  * @author Ravindra
  */
-public class PatientNav extends javax.swing.JPanel {
+public class DoctorNav extends javax.swing.JPanel {
 
     /**
-     * Creates new form PatientNav
+     * Creates new form DoctorNav
      */
     javax.swing.JSplitPane SplitPane;
     CityStore cityStore;
@@ -35,7 +36,7 @@ public class PatientNav extends javax.swing.JPanel {
     VitalSignsStore vitalSignsStore;
     PatientStore patientStore;
     
-    public PatientNav(javax.swing.JSplitPane SplitPane, 
+    public DoctorNav(javax.swing.JSplitPane SplitPane, 
         models.SystemAdmin systemAdmin,
         CityStore cityStore,
         CommunityStore communityStore,
@@ -46,9 +47,10 @@ public class PatientNav extends javax.swing.JPanel {
         EncounterStore encounterStore,
         VitalSignsStore vitalSignsStore,
         PatientStore patientStore) {
-        initComponents();
         
-         this.SplitPane = SplitPane;
+        
+        initComponents();
+        this.SplitPane = SplitPane;
         this.cityStore = cityStore;
         this.systemAdmin = systemAdmin;
         this.communityStore = communityStore;
@@ -59,6 +61,7 @@ public class PatientNav extends javax.swing.JPanel {
         this.encounterStore = encounterStore;
         this.vitalSignsStore = vitalSignsStore;
         this.patientStore = patientStore;
+
     }
 
     /**
@@ -70,46 +73,24 @@ public class PatientNav extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        btnCreateVital = new javax.swing.JButton();
-        btnViewVital = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        bntViewEncounter = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         lblName = new javax.swing.JLabel();
+        btnCreateVital = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel1.setText("Vitals");
+        setBackground(new java.awt.Color(0, 153, 204));
 
-        btnCreateVital.setText("Create");
+        jLabel3.setText("Hello,");
+
+        lblName.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        lblName.setText("Doctor");
+
+        btnCreateVital.setText("Encounter");
         btnCreateVital.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateVitalActionPerformed(evt);
             }
         });
-
-        btnViewVital.setText("View");
-        btnViewVital.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewVitalActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setText("Encounter");
-
-        bntViewEncounter.setText("View");
-        bntViewEncounter.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bntViewEncounterActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setText("Hello,");
-
-        lblName.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
-        lblName.setText("Ravindra");
 
         btnLogout.setText("logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -128,14 +109,10 @@ public class PatientNav extends javax.swing.JPanel {
                     .addComponent(lblName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
                             .addComponent(btnCreateVital)
-                            .addComponent(btnViewVital)
-                            .addComponent(jLabel2)
-                            .addComponent(bntViewEncounter)
                             .addComponent(jLabel3)
                             .addComponent(btnLogout))
-                        .addGap(0, 16, Short.MAX_VALUE)))
+                        .addGap(0, 5, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -145,36 +122,22 @@ public class PatientNav extends javax.swing.JPanel {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblName)
-                .addGap(31, 31, 31)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnCreateVital)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnViewVital)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bntViewEncounter)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 266, Short.MAX_VALUE)
+                .addComponent(btnCreateVital)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 396, Short.MAX_VALUE)
                 .addComponent(btnLogout)
-                .addGap(44, 44, 44))
+                .addGap(49, 49, 49))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bntViewEncounterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntViewEncounterActionPerformed
-        PatientEncounterPanel patientEncounterPanel = new PatientEncounterPanel(systemAdmin, encounterStore, doctorStore, vitalSignsStore);
-        SplitPane.setRightComponent(patientEncounterPanel);
-    }//GEN-LAST:event_bntViewEncounterActionPerformed
-
     private void btnCreateVitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateVitalActionPerformed
-        VitalSignsCreatePanel vitalCreatePanel = new VitalSignsCreatePanel(vitalSignsStore, doctorStore, hospitalStore, personStore, patientStore, systemAdmin, communityStore);
-        SplitPane.setRightComponent(vitalCreatePanel);
+        
+        if(vitalSignsStore.getStore() == null) {
+            JOptionPane.showMessageDialog(this,"No vitals found");
+        }
+        DoctorEncountPanel doctorEncountPanel = new DoctorEncountPanel(systemAdmin, vitalSignsStore, doctorStore, hospitalStore, encounterStore);
+        SplitPane.setRightComponent(doctorEncountPanel);
     }//GEN-LAST:event_btnCreateVitalActionPerformed
-
-    private void btnViewVitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewVitalActionPerformed
-        VitalSignsViewPanel vitalViewPanel = new VitalSignsViewPanel(vitalSignsStore, doctorStore, hospitalStore,systemAdmin);
-        SplitPane.setRightComponent(vitalViewPanel);
-    }//GEN-LAST:event_btnViewVitalActionPerformed
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         LoginPanel loginPanel = new LoginPanel(SplitPane, systemAdmin,cityStore, communityStore, hospitalStore, houseStore, doctorStore, personStore, encounterStore, vitalSignsStore, patientStore);
@@ -184,12 +147,8 @@ public class PatientNav extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bntViewEncounter;
     private javax.swing.JButton btnCreateVital;
     private javax.swing.JButton btnLogout;
-    private javax.swing.JButton btnViewVital;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblName;
     // End of variables declaration//GEN-END:variables

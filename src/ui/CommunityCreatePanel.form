@@ -3,7 +3,7 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <Properties>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-      <Color blue="cc" green="cc" red="0" type="rgb"/>
+      <Color blue="ff" green="99" red="0" type="rgb"/>
     </Property>
   </Properties>
   <AuxValues>
@@ -28,20 +28,20 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jLabel4" max="32767" attributes="0"/>
                   <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
                   <Component id="jLabel3" alignment="0" max="32767" attributes="0"/>
                   <Component id="jLabel2" alignment="0" min="-2" pref="96" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="TextHospId" alignment="0" max="32767" attributes="0"/>
-                      <Component id="TextCommunityId" alignment="0" max="32767" attributes="0"/>
-                      <Component id="TextHospName" alignment="0" max="32767" attributes="0"/>
-                      <Component id="TextPassword" alignment="0" pref="200" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="TextCityId" max="32767" attributes="0"/>
+                      <Component id="TextCommunityId" max="32767" attributes="0"/>
+                      <Component id="TextCommunityName" max="32767" attributes="0"/>
+                      <Component id="TextPassword" pref="200" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="btnSubmit" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="btnSubmit" min="-2" pref="100" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -55,7 +55,7 @@
               <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="TextHospId" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TextCityId" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -65,7 +65,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="TextHospName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TextCommunityName" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -80,35 +80,19 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="TextHospId">
-    </Component>
-    <Component class="javax.swing.JTextField" name="TextCommunityId">
-    </Component>
-    <Component class="javax.swing.JTextField" name="TextHospName">
-    </Component>
-    <Component class="javax.swing.JPasswordField" name="TextPassword">
-    </Component>
-    <Component class="javax.swing.JButton" name="btnSubmit">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Submit"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSubmitActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="24" style="0"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Create Hospital"/>
+        <Property name="text" type="java.lang.String" value="Create Community"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="text" type="java.lang.String" value="Hospital Id"/>
+        <Property name="text" type="java.lang.String" value="City Id"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
@@ -120,7 +104,7 @@
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="text" type="java.lang.String" value="Hospital Name"/>
+        <Property name="text" type="java.lang.String" value="Community Name"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
@@ -128,6 +112,22 @@
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" value="Password"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="TextCityId">
+    </Component>
+    <Component class="javax.swing.JTextField" name="TextCommunityId">
+    </Component>
+    <Component class="javax.swing.JTextField" name="TextCommunityName">
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="TextPassword">
+    </Component>
+    <Component class="javax.swing.JButton" name="btnSubmit">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Submit"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSubmitActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
