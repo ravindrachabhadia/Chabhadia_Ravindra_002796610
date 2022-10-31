@@ -522,23 +522,23 @@ public class ManageVitalSignsJPanel extends javax.swing.JPanel {
             vitalSignDataset.addValue(vitalSign.getWeight(),"WT", vitalSign.getTimestamp());
         }
         
-        JFreeChart vitalSignChart= ChartFactory.createBarChart3D("Vital Sign Chart", 
-                "Time Stamp", "Rate", vitalSignDataset, PlotOrientation.VERTICAL, true, false, false);
-        vitalSignChart.setBackgroundPaint(Color.white);
-        CategoryPlot vitalSignChartPlot = vitalSignChart.getCategoryPlot();
-        vitalSignChartPlot.setBackgroundPaint(Color.lightGray);
-        
-        CategoryAxis vitalSignDomainAxis = vitalSignChartPlot.getDomainAxis();
-        vitalSignDomainAxis.setCategoryLabelPositions(
-                CategoryLabelPositions.createUpRotationLabelPositions(Math.PI / 6.0)
-        );
-        
-        NumberAxis vitalSignRangeAxis = (NumberAxis) vitalSignChartPlot.getRangeAxis();
-        vitalSignRangeAxis.setStandardTickUnits(NumberAxis.createIntegerTickUnits());
-        
-        ChartFrame chartFrame = new ChartFrame("Chart", vitalSignChart);
-        chartFrame.setVisible(true);
-        chartFrame.setSize(500, 500);
+//        JFreeChart vitalSignChart= ChartFactory.createBarChart3D("Vital Sign Chart", 
+//                "Time Stamp", "Rate", vitalSignDataset, PlotOrientation.VERTICAL, true, false, false);
+//        vitalSignChart.setBackgroundPaint(Color.white);
+//        CategoryPlot vitalSignChartPlot = vitalSignChart.getCategoryPlot();
+//        vitalSignChartPlot.setBackgroundPaint(Color.lightGray);
+//        
+//        CategoryAxis vitalSignDomainAxis = vitalSignChartPlot.getDomainAxis();
+//        vitalSignDomainAxis.setCategoryLabelPositions(
+//                CategoryLabelPositions.createUpRotationLabelPositions(Math.PI / 6.0)
+//        );
+//        
+//        NumberAxis vitalSignRangeAxis = (NumberAxis) vitalSignChartPlot.getRangeAxis();
+//        vitalSignRangeAxis.setStandardTickUnits(NumberAxis.createIntegerTickUnits());
+//        
+//        ChartFrame chartFrame = new ChartFrame("Chart", vitalSignChart);
+//        chartFrame.setVisible(true);
+//        chartFrame.setSize(500, 500);
         
     }
 
