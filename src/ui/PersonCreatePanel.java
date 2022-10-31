@@ -4,6 +4,8 @@
  */
 package ui;
 
+import java.awt.Color;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
@@ -15,7 +17,7 @@ import models.PersonStore;
 
 /**
  *
- * @author sagred
+ * @author Ravindra
  */
 
 public class PersonCreatePanel extends javax.swing.JPanel {
@@ -104,7 +106,27 @@ public class PersonCreatePanel extends javax.swing.JPanel {
 
         jLabel5.setText("Gender");
 
+        TextPersonFirstName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextPersonFirstNameActionPerformed(evt);
+            }
+        });
+        TextPersonFirstName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                TextPersonFirstNameKeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                TextPersonFirstNameKeyReleased(evt);
+            }
+        });
+
         jLabel6.setText("Date of Birth");
+
+        TextPersonLastName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                TextPersonLastNameKeyPressed(evt);
+            }
+        });
 
         jLabel7.setText("Email");
 
@@ -113,6 +135,12 @@ public class PersonCreatePanel extends javax.swing.JPanel {
         jLabel9.setText("Address");
 
         jLabel10.setText("House ID");
+
+        TextPersonPhoneNumber.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                TextPersonPhoneNumberKeyReleased(evt);
+            }
+        });
 
         jLabel11.setText("Password");
 
@@ -240,6 +268,18 @@ public class PersonCreatePanel extends javax.swing.JPanel {
        resource.setPhone(TextPersonPhoneNumber.getText());
        resource.setPassword(TextPersonPassword.getText());
        
+       String Email;
+        
+        
+        if(TextPersonEmail.getText().contains("@") && TextPersonEmail.getText().endsWith(".com")){
+                Email = TextPersonEmail.getText();
+             }
+             else{
+                 JOptionPane.showMessageDialog(null, "Invalid Email");
+            return;
+}
+       
+       
        JOptionPane.showMessageDialog(this,"Successfully added");
         
         TextPersonId.setText("");
@@ -258,6 +298,92 @@ public class PersonCreatePanel extends javax.swing.JPanel {
     private void communityComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_communityComboActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_communityComboActionPerformed
+
+    private void TextPersonPhoneNumberKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TextPersonPhoneNumberKeyReleased
+        // TODO add your handling code here:
+        String PhoneNum = TextPersonPhoneNumber.getText();
+        int len  = PhoneNum.length();
+        char h = evt.getKeyChar();
+        
+        if(evt.getKeyChar()>='0' && evt.getKeyChar()<='9')
+        {
+            if(len<10)
+            {
+                TextPersonPhoneNumber.setEditable(true);
+            }
+            else
+            {
+                TextPersonPhoneNumber.setEditable(false);
+            }
+        }
+        else
+        {
+            if(evt.getExtendedKeyCode()==KeyEvent.VK_BACK_SPACE || evt.getExtendedKeyCode()==KeyEvent.VK_DELETE)
+             {
+                TextPersonPhoneNumber.setEditable(true);
+            }
+            else
+            {
+                TextPersonPhoneNumber.setEditable(false);
+            }
+        }
+        if(PhoneNum.matches("^[0-9]*$") && PhoneNum.length()==9)
+        {
+            TextPersonPhoneNumber.setBackground(Color.GREEN);
+          
+        }
+        else
+              TextPersonPhoneNumber.setBackground(Color.red);
+        
+        
+        
+        
+    }//GEN-LAST:event_TextPersonPhoneNumberKeyReleased
+
+    private void TextPersonFirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextPersonFirstNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextPersonFirstNameActionPerformed
+
+    private void TextPersonFirstNameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TextPersonFirstNameKeyReleased
+        // TODO add your handling code here:
+   
+    }//GEN-LAST:event_TextPersonFirstNameKeyReleased
+
+    private void TextPersonFirstNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TextPersonFirstNameKeyPressed
+        // TODO add your handling code here:
+         char C = evt.getKeyChar();
+        if (Character.isLetter(C)|| Character.isWhitespace(C) || Character.isISOControl(C)){
+        
+            TextPersonFirstName.setEditable(true);
+        
+        }
+        
+        else{
+        
+            TextPersonFirstName.setEditable(true);
+            JOptionPane.showMessageDialog(null, "Please Enter a Valid Name");
+  
+}
+    
+    }//GEN-LAST:event_TextPersonFirstNameKeyPressed
+
+    private void TextPersonLastNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TextPersonLastNameKeyPressed
+        // TODO add your handling code here:
+        char C = evt.getKeyChar();
+        if (Character.isLetter(C)|| Character.isWhitespace(C) || Character.isISOControl(C)){
+        
+            TextPersonLastName.setEditable(true);
+        
+        }
+        
+        else{
+        
+            TextPersonLastName.setEditable(true);
+            JOptionPane.showMessageDialog(null, "Please Enter a Valid Name");
+  
+}
+        
+    }//GEN-LAST:event_TextPersonLastNameKeyPressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

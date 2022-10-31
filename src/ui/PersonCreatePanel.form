@@ -161,6 +161,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="TextPersonFirstName">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextPersonFirstNameActionPerformed"/>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="TextPersonFirstNameKeyPressed"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="TextPersonFirstNameKeyReleased"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
@@ -168,6 +173,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="TextPersonLastName">
+      <Events>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="TextPersonLastNameKeyPressed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
@@ -194,6 +202,9 @@
     <Component class="javax.swing.JTextField" name="TextPersonEmail">
     </Component>
     <Component class="javax.swing.JTextField" name="TextPersonPhoneNumber">
+      <Events>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="TextPersonPhoneNumberKeyReleased"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel11">
       <Properties>

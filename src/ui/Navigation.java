@@ -19,7 +19,7 @@ import models.VitalSignsStore;
 
 /**
  *
- * @author sagred
+ * @author Ravindra
  */
 public class Navigation extends javax.swing.JPanel {
 

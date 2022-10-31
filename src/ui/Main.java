@@ -15,7 +15,7 @@ import models.PersonStore;
 import models.VitalSignsStore;
 /**
  *
- * @author sagred
+ * @author Ravindra
  */
 public class Main extends javax.swing.JFrame {
 

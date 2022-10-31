@@ -12,7 +12,7 @@ import models.PersonStore;
 
 /**
  *
- * @author sagred
+ * @author Ravindra
  */
 public class PersonViewPanel extends javax.swing.JPanel {
 

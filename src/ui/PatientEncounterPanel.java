@@ -15,7 +15,7 @@ import models.VitalSignsStore;
 
 /**
  *
- * @author sagred
+ * @author Ravindra
  */
 public class PatientEncounterPanel extends javax.swing.JPanel {
 

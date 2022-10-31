@@ -23,7 +23,7 @@ import models.VitalSignsStore;
 
 /**
  *
- * @author sagred
+ * @author Ravindra
  */
 public class VitalSignsCreatePanel extends javax.swing.JPanel {
 

@@ -8,9 +8,9 @@ package model;
  *
  * @author Ravindra
  */
-public class Doctor {
-    
-    private int did;
+public class Person {
+ 
+    private int pid;
     private String firstName;
     private String lastName;
     private String Gender;
@@ -18,15 +18,17 @@ public class Doctor {
     private String email;
     private String phone;
     private String address;
-    private int hospitalId;
+    private int houseId;
     private String password;
+    private int communityId;
+    
 
-    public int getDid() {
-        return did;
+    public int getPid() {
+        return pid;
     }
 
-    public void setDid(int did) {
-        this.did = did;
+    public void setPid(int pid) {
+        this.pid = pid;
     }
 
     public String getFirstName() {
@@ -83,14 +85,14 @@ public class Doctor {
 
     public void setAddress(String address) {
         this.address = address;
+    }  
+
+    public int getHouseId() {
+        return houseId;
     }
 
-    public int getHospitalId() {
-        return hospitalId;
-    }
-
-    public void setHospitalId(int hospitalId) {
-        this.hospitalId = hospitalId;
+    public void setHouseId(int houseId) {
+        this.houseId = houseId;
     }
 
     public String getPassword() {
@@ -100,11 +102,19 @@ public class Doctor {
     public void setPassword(String password) {
         this.password = password;
     }
-    
+
+    public int getCommunityId() {
+        return communityId;
+    }
+
+    public void setCommunityId(int communityId) {
+        this.communityId = communityId;
+    }
+
     @Override
     public String toString() {
-        return String.valueOf(did) ;
+        return String.valueOf(pid) ;
     }
     
-    
 }
+

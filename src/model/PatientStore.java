@@ -9,30 +9,31 @@ import java.util.ArrayList;
 /**
  *
  * @author Ravindra
- */public class CityStore {
+ */
+public class PatientStore {
     
-    private ArrayList<City> store; 
+   private ArrayList<Patient> store; 
    
-   public CityStore() {
-       this.store = new ArrayList<City>();
+   public PatientStore() {
+       this.store = new ArrayList<Patient>();
    }
 
-    public ArrayList<City> getStore() {
+    public ArrayList<Patient> getStore() {
         return store;
     }
 
-    public void setStore(ArrayList<City> store) {
+    public void setStore(ArrayList<Patient> store) {
         this.store = store;
     }
    
-    public City addNewResource(){
+    public Patient addNewResource(){
         
-        City newResource = new City();
+        Patient newResource = new Patient();
         store.add(newResource);
         return newResource;
     }
     
-    public void deleteResource(City resource) {
+    public void deleteResource(Patient resource) {
         store.remove(resource);
     }
     
