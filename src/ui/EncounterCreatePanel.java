@@ -73,6 +73,7 @@ public class EncounterCreatePanel extends javax.swing.JPanel {
 
         jLabel8.setText("Next Encounter");
 
+        btnSubmit.setBackground(new java.awt.Color(255, 102, 102));
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

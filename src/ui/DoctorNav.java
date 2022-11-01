@@ -85,6 +85,7 @@ public class DoctorNav extends javax.swing.JPanel {
         lblName.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         lblName.setText("Doctor");
 
+        btnCreateVital.setBackground(new java.awt.Color(153, 0, 153));
         btnCreateVital.setText("Encounter");
         btnCreateVital.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,6 +93,7 @@ public class DoctorNav extends javax.swing.JPanel {
             }
         });
 
+        btnLogout.setBackground(new java.awt.Color(255, 0, 0));
         btnLogout.setText("logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

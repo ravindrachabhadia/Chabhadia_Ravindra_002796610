@@ -65,6 +65,7 @@ public class CommunityCreatePanel extends javax.swing.JPanel {
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel5.setText("Password");
 
+        btnSubmit.setBackground(new java.awt.Color(255, 102, 102));
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

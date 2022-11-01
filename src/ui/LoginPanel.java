@@ -4,6 +4,7 @@
  */
 package ui;
 
+import java.awt.Color;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import models.CityStore;
@@ -92,6 +93,7 @@ public class LoginPanel extends javax.swing.JPanel {
         btnSubmit = new javax.swing.JButton();
         btnNewPerson = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(0, 153, 204));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         labelLogin.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -114,14 +116,32 @@ public class LoginPanel extends javax.swing.JPanel {
 
         TextPassword.setToolTipText("");
 
+        btnSubmit.setBackground(new java.awt.Color(255, 102, 102));
         btnSubmit.setText("Submit");
+        btnSubmit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnSubmitMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnSubmitMouseExited(evt);
+            }
+        });
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
             }
         });
 
+        btnNewPerson.setBackground(new java.awt.Color(255, 102, 0));
         btnNewPerson.setText("New Person");
+        btnNewPerson.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnNewPersonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnNewPersonMouseExited(evt);
+            }
+        });
         btnNewPerson.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNewPersonActionPerformed(evt);
@@ -340,6 +360,29 @@ public class LoginPanel extends javax.swing.JPanel {
         BackPanel backPanel = new BackPanel(SplitPane, systemAdmin, cityStore, communityStore, hospitalStore, houseStore, doctorStore, personStore, encounterStore, vitalSignsStore, patientStore);
         SplitPane.setLeftComponent(backPanel);
     }//GEN-LAST:event_btnNewPersonActionPerformed
+
+    private void btnSubmitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSubmitMouseEntered
+        // TODO add your handling code here:
+        
+        btnSubmit.setForeground(Color.blue);
+    }//GEN-LAST:event_btnSubmitMouseEntered
+
+    private void btnSubmitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSubmitMouseExited
+        // TODO add your handling code here:
+        
+        btnSubmit.setForeground(Color.black);
+    }//GEN-LAST:event_btnSubmitMouseExited
+
+    private void btnNewPersonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNewPersonMouseExited
+        // TODO add your handling code here:
+        
+        btnNewPerson.setForeground(Color.blue);
+    }//GEN-LAST:event_btnNewPersonMouseExited
+
+    private void btnNewPersonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNewPersonMouseEntered
+        // TODO add your handling code here:
+        btnNewPerson.setForeground(Color.pink);
+    }//GEN-LAST:event_btnNewPersonMouseEntered
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

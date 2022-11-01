@@ -4,6 +4,7 @@
  */
 package ui;
 
+import java.awt.Color;
 import models.CityStore;
 import models.CommunityStore;
 import models.DoctorStore;
@@ -79,9 +80,12 @@ public class PatientNav extends javax.swing.JPanel {
         lblName = new javax.swing.JLabel();
         btnLogout = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(0, 153, 204));
+
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("Vitals");
 
+        btnCreateVital.setBackground(new java.awt.Color(255, 255, 0));
         btnCreateVital.setText("Create");
         btnCreateVital.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,6 +93,7 @@ public class PatientNav extends javax.swing.JPanel {
             }
         });
 
+        btnViewVital.setBackground(new java.awt.Color(51, 204, 0));
         btnViewVital.setText("View");
         btnViewVital.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,6 +104,7 @@ public class PatientNav extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Encounter");
 
+        bntViewEncounter.setBackground(new java.awt.Color(51, 204, 0));
         bntViewEncounter.setText("View");
         bntViewEncounter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,7 +117,16 @@ public class PatientNav extends javax.swing.JPanel {
         lblName.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         lblName.setText("Ravindra");
 
+        btnLogout.setBackground(new java.awt.Color(255, 0, 0));
         btnLogout.setText("logout");
+        btnLogout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnLogoutMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnLogoutMouseExited(evt);
+            }
+        });
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogoutActionPerformed(evt);
@@ -181,6 +196,18 @@ public class PatientNav extends javax.swing.JPanel {
         SplitPane.setRightComponent(loginPanel);
         SplitPane.setLeftComponent(null);
     }//GEN-LAST:event_btnLogoutActionPerformed
+
+    private void btnLogoutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLogoutMouseEntered
+        // TODO add your handling code here:
+        
+        btnLogout.setForeground(Color.pink);
+    }//GEN-LAST:event_btnLogoutMouseEntered
+
+    private void btnLogoutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLogoutMouseExited
+        // TODO add your handling code here:
+        
+        btnLogout.setForeground(Color.black);
+    }//GEN-LAST:event_btnLogoutMouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

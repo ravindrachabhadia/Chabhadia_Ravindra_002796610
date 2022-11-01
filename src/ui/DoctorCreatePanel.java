@@ -103,6 +103,7 @@ public class DoctorCreatePanel extends javax.swing.JPanel {
             }
         });
 
+        btnSubmit.setBackground(new java.awt.Color(255, 102, 102));
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -221,6 +222,62 @@ public class DoctorCreatePanel extends javax.swing.JPanel {
         resource.setGender(jComboBox1.getSelectedItem().toString());
         resource.setPhone(TextDoctorPhoneNumber.getText());
         resource.setPassword(TextPassword.getText());
+        
+        String FirstName;
+        if(TextDoctorFirstName.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Please Fill Name details");
+            return;
+            
+        }
+        else{
+            FirstName = TextDoctorFirstName.getText();
+        }
+        String LastName;
+        if(TextDoctorLastName.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Please Fill Name details");
+            return;
+            
+        }
+        else{
+            LastName = TextDoctorLastName.getText();
+        }
+        
+        int Pid;
+        try{
+            Pid = Integer.parseInt(TextDoctorId.getText());
+        }
+        catch(NumberFormatException e){
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Please enter correct ID");
+            return;
+        }
+        
+        int age;
+        try{
+            age = Integer.parseInt(TextPassword.getText());
+        }
+        catch(NumberFormatException e){
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Please enter correct Age");
+            return;
+        }
+        
+        int phone;
+        if(String.valueOf(TextDoctorPhoneNumber.getText()).length() == 9 ){
+            try{
+                phone = Integer.parseInt(TextDoctorPhoneNumber.getText());
+            }
+            catch(NumberFormatException e){
+                e.printStackTrace();
+                JOptionPane.showMessageDialog(null, "Please enter correct  Number");
+                return;
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Please enter correct Phone Number");
+                return;
+        }
+        
         
         
         

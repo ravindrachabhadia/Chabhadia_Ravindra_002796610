@@ -127,6 +127,7 @@ public class DoctorEncountPanel extends javax.swing.JPanel {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Doctor Create Encounter");
 
+        btnView.setBackground(new java.awt.Color(51, 204, 0));
         btnView.setText("View");
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,6 +153,7 @@ public class DoctorEncountPanel extends javax.swing.JPanel {
 
         jLabel6.setText("Date");
 
+        btnSubmit.setBackground(new java.awt.Color(255, 102, 102));
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

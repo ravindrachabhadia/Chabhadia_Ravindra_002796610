@@ -95,6 +95,8 @@ public class PatientEncounterPanel extends javax.swing.JPanel {
         jLabel13 = new javax.swing.JLabel();
         lblDoctorName = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(0, 153, 153));
+
         tblResources.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -120,6 +122,7 @@ public class PatientEncounterPanel extends javax.swing.JPanel {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("View Encounters");
 
+        btnView.setBackground(new java.awt.Color(51, 153, 0));
         btnView.setText("View");
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

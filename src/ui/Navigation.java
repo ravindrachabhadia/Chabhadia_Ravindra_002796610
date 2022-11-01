@@ -4,6 +4,7 @@
  */
 package ui;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import models.CityStore;
@@ -143,21 +144,49 @@ public class Navigation extends javax.swing.JPanel {
         btnEncountCreate = new javax.swing.JButton();
         btnEncountView = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(0, 153, 204));
+
         btnLogout.setText(" logout");
+        btnLogout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnLogoutMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnLogoutMouseExited(evt);
+            }
+        });
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogoutActionPerformed(evt);
             }
         });
 
+        btnCreateCity.setBackground(new java.awt.Color(51, 255, 51));
         btnCreateCity.setText("Create");
+        btnCreateCity.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnCreateCityMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnCreateCityMouseExited(evt);
+            }
+        });
         btnCreateCity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateCityActionPerformed(evt);
             }
         });
 
+        btnViewCity.setBackground(new java.awt.Color(51, 204, 0));
         btnViewCity.setText("View");
+        btnViewCity.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnViewCityMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnViewCityMouseExited(evt);
+            }
+        });
         btnViewCity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewCityActionPerformed(evt);
@@ -170,14 +199,32 @@ public class Navigation extends javax.swing.JPanel {
         lblCommunity.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblCommunity.setText("Community");
 
+        btnComtCreate.setBackground(new java.awt.Color(51, 255, 51));
         btnComtCreate.setText("Create");
+        btnComtCreate.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnComtCreateMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnComtCreateMouseExited(evt);
+            }
+        });
         btnComtCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnComtCreateActionPerformed(evt);
             }
         });
 
+        btnComtView.setBackground(new java.awt.Color(51, 204, 0));
         btnComtView.setText("View");
+        btnComtView.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnComtViewMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnComtViewMouseExited(evt);
+            }
+        });
         btnComtView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnComtViewActionPerformed(evt);
@@ -187,14 +234,32 @@ public class Navigation extends javax.swing.JPanel {
         lblHospital.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblHospital.setText("Hospital");
 
+        btnHospCreate.setBackground(new java.awt.Color(51, 255, 51));
         btnHospCreate.setText("Create");
+        btnHospCreate.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnHospCreateMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnHospCreateMouseExited(evt);
+            }
+        });
         btnHospCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHospCreateActionPerformed(evt);
             }
         });
 
+        btnHospView.setBackground(new java.awt.Color(51, 204, 0));
         btnHospView.setText("View");
+        btnHospView.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnHospViewMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnHospViewMouseExited(evt);
+            }
+        });
         btnHospView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHospViewActionPerformed(evt);
@@ -204,14 +269,32 @@ public class Navigation extends javax.swing.JPanel {
         lblHouse.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblHouse.setText("House");
 
+        btnHouseCreate.setBackground(new java.awt.Color(51, 255, 51));
         btnHouseCreate.setText("Create");
+        btnHouseCreate.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnHouseCreateMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnHouseCreateMouseExited(evt);
+            }
+        });
         btnHouseCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHouseCreateActionPerformed(evt);
             }
         });
 
+        btnHouseView.setBackground(new java.awt.Color(51, 204, 0));
         btnHouseView.setText("View");
+        btnHouseView.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnHouseViewMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnHouseViewMouseExited(evt);
+            }
+        });
         btnHouseView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHouseViewActionPerformed(evt);
@@ -221,14 +304,32 @@ public class Navigation extends javax.swing.JPanel {
         lblDoctor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblDoctor.setText("Doctor");
 
+        btnDoctorCreate.setBackground(new java.awt.Color(51, 255, 51));
         btnDoctorCreate.setText("Create");
+        btnDoctorCreate.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnDoctorCreateMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnDoctorCreateMouseExited(evt);
+            }
+        });
         btnDoctorCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDoctorCreateActionPerformed(evt);
             }
         });
 
+        btnDoctorView.setBackground(new java.awt.Color(51, 204, 0));
         btnDoctorView.setText("View");
+        btnDoctorView.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnDoctorViewMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnDoctorViewMouseExited(evt);
+            }
+        });
         btnDoctorView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDoctorViewActionPerformed(evt);
@@ -238,14 +339,32 @@ public class Navigation extends javax.swing.JPanel {
         lblPerson.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblPerson.setText("Person");
 
+        btnPersonCreate.setBackground(new java.awt.Color(51, 255, 0));
         btnPersonCreate.setText("Create");
+        btnPersonCreate.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnPersonCreateMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnPersonCreateMouseExited(evt);
+            }
+        });
         btnPersonCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPersonCreateActionPerformed(evt);
             }
         });
 
+        btnPersonView.setBackground(new java.awt.Color(51, 204, 0));
         btnPersonView.setText("View");
+        btnPersonView.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnPersonViewMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnPersonViewMouseExited(evt);
+            }
+        });
         btnPersonView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPersonViewActionPerformed(evt);
@@ -255,14 +374,32 @@ public class Navigation extends javax.swing.JPanel {
         lblVitalSigns.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblVitalSigns.setText("Vital Signs");
 
+        btnVitalCreate.setBackground(new java.awt.Color(51, 255, 51));
         btnVitalCreate.setText("Create");
+        btnVitalCreate.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnVitalCreateMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnVitalCreateMouseExited(evt);
+            }
+        });
         btnVitalCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVitalCreateActionPerformed(evt);
             }
         });
 
+        btnVitalView.setBackground(new java.awt.Color(51, 204, 0));
         btnVitalView.setText("View");
+        btnVitalView.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnVitalViewMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnVitalViewMouseExited(evt);
+            }
+        });
         btnVitalView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVitalViewActionPerformed(evt);
@@ -272,14 +409,32 @@ public class Navigation extends javax.swing.JPanel {
         lblEncounters.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblEncounters.setText("Encounters");
 
+        btnEncountCreate.setBackground(new java.awt.Color(51, 255, 51));
         btnEncountCreate.setText("Create");
+        btnEncountCreate.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnEncountCreateMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnEncountCreateMouseExited(evt);
+            }
+        });
         btnEncountCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEncountCreateActionPerformed(evt);
             }
         });
 
+        btnEncountView.setBackground(new java.awt.Color(51, 204, 0));
         btnEncountView.setText("View");
+        btnEncountView.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnEncountViewMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnEncountViewMouseExited(evt);
+            }
+        });
         btnEncountView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEncountViewActionPerformed(evt);
@@ -294,10 +449,6 @@ public class Navigation extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(btnHouseCreate)
-                            .addGap(18, 18, 18)
-                            .addComponent(btnPersonCreate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -319,9 +470,15 @@ public class Navigation extends javax.swing.JPanel {
                                 .addComponent(btnDoctorCreate)
                                 .addComponent(btnDoctorView)))
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(btnHouseView)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(btnHouseCreate)
+                                .addComponent(btnHouseView))
                             .addGap(18, 18, 18)
-                            .addComponent(btnPersonView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(btnPersonCreate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(btnPersonView)
+                                    .addGap(0, 0, Short.MAX_VALUE)))))
                     .addComponent(lblVitalSigns)
                     .addComponent(btnVitalCreate)
                     .addComponent(btnVitalView)
@@ -478,6 +635,177 @@ public class Navigation extends javax.swing.JPanel {
         EncounterViewPanel encounterViewPanel = new EncounterViewPanel(encounterStore, doctorStore);
         SplitPane.setRightComponent(encounterViewPanel);
     }//GEN-LAST:event_btnEncountViewActionPerformed
+
+    private void btnCreateCityMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCreateCityMouseEntered
+        // TODO add your handling code here:
+        btnCreateCity.setForeground(Color.blue);
+    }//GEN-LAST:event_btnCreateCityMouseEntered
+
+    private void btnCreateCityMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCreateCityMouseExited
+        // TODO add your handling code here:
+        btnCreateCity.setForeground(Color.pink);
+    }//GEN-LAST:event_btnCreateCityMouseExited
+
+    private void btnViewCityMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewCityMouseEntered
+        // TODO add your handling code here:
+        btnViewCity.setForeground(Color.blue);
+    }//GEN-LAST:event_btnViewCityMouseEntered
+
+    private void btnViewCityMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewCityMouseExited
+        // TODO add your handling code here:
+        btnViewCity.setForeground(Color.black);
+    }//GEN-LAST:event_btnViewCityMouseExited
+
+    private void btnComtCreateMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnComtCreateMouseEntered
+        // TODO add your handling code here:
+        btnComtCreate.setForeground(Color.blue);
+    }//GEN-LAST:event_btnComtCreateMouseEntered
+
+    private void btnComtCreateMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnComtCreateMouseExited
+        // TODO add your handling code here:
+        btnComtCreate.setForeground(Color.black);
+    }//GEN-LAST:event_btnComtCreateMouseExited
+
+    private void btnComtViewMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnComtViewMouseEntered
+        // TODO add your handling code here:
+        btnComtView.setForeground(Color.blue);
+    }//GEN-LAST:event_btnComtViewMouseEntered
+
+    private void btnComtViewMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnComtViewMouseExited
+        // TODO add your handling code here:
+        btnComtView.setForeground(Color.black);
+    }//GEN-LAST:event_btnComtViewMouseExited
+
+    private void btnHospCreateMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHospCreateMouseEntered
+        // TODO add your handling code here:
+        btnHospCreate.setForeground(Color.blue);
+    }//GEN-LAST:event_btnHospCreateMouseEntered
+
+    private void btnHospCreateMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHospCreateMouseExited
+        // TODO add your handling code here:
+        btnHospCreate.setForeground(Color.black);
+    }//GEN-LAST:event_btnHospCreateMouseExited
+
+    private void btnHospViewMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHospViewMouseEntered
+        // TODO add your handling code here:
+        btnHospView.setForeground(Color.blue);
+    }//GEN-LAST:event_btnHospViewMouseEntered
+
+    private void btnHospViewMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHospViewMouseExited
+        // TODO add your handling code here:
+        btnHospView.setForeground(Color.black);
+    }//GEN-LAST:event_btnHospViewMouseExited
+
+    private void btnDoctorCreateMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDoctorCreateMouseEntered
+        // TODO add your handling code here:
+        btnDoctorCreate.setForeground(Color.blue);
+    }//GEN-LAST:event_btnDoctorCreateMouseEntered
+
+    private void btnDoctorCreateMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDoctorCreateMouseExited
+        // TODO add your handling code here:
+        btnDoctorCreate.setForeground(Color.black);
+    }//GEN-LAST:event_btnDoctorCreateMouseExited
+
+    private void btnDoctorViewMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDoctorViewMouseEntered
+        // TODO add your handling code here:
+        btnDoctorView.setForeground(Color.blue);
+    }//GEN-LAST:event_btnDoctorViewMouseEntered
+
+    private void btnDoctorViewMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDoctorViewMouseExited
+        // TODO add your handling code here:
+        btnDoctorView.setForeground(Color.black);
+    }//GEN-LAST:event_btnDoctorViewMouseExited
+
+    private void btnHouseCreateMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHouseCreateMouseExited
+        // TODO add your handling code here:
+        btnHouseCreate.setForeground(Color.blue);
+    }//GEN-LAST:event_btnHouseCreateMouseExited
+
+    private void btnHouseCreateMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHouseCreateMouseEntered
+        // TODO add your handling code here:
+        btnHouseCreate.setForeground(Color.black);
+    }//GEN-LAST:event_btnHouseCreateMouseEntered
+
+    private void btnHouseViewMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHouseViewMouseExited
+        // TODO add your handling code here:
+        btnHouseView.setForeground(Color.blue);
+    }//GEN-LAST:event_btnHouseViewMouseExited
+
+    private void btnHouseViewMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHouseViewMouseEntered
+        // TODO add your handling code here:
+        btnHouseView.setForeground(Color.black);
+    }//GEN-LAST:event_btnHouseViewMouseEntered
+
+    private void btnPersonCreateMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPersonCreateMouseExited
+        // TODO add your handling code here:
+        btnPersonCreate.setForeground(Color.blue);
+    }//GEN-LAST:event_btnPersonCreateMouseExited
+
+    private void btnPersonCreateMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPersonCreateMouseEntered
+        // TODO add your handling code here:
+        btnPersonCreate.setForeground(Color.black);
+    }//GEN-LAST:event_btnPersonCreateMouseEntered
+
+    private void btnPersonViewMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPersonViewMouseExited
+        // TODO add your handling code here:
+        btnPersonView.setForeground(Color.blue);
+    }//GEN-LAST:event_btnPersonViewMouseExited
+
+    private void btnPersonViewMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPersonViewMouseEntered
+        // TODO add your handling code here:
+        btnPersonView.setForeground(Color.black);
+    }//GEN-LAST:event_btnPersonViewMouseEntered
+
+    private void btnVitalCreateMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVitalCreateMouseEntered
+        // TODO add your handling code here:
+        btnVitalCreate.setForeground(Color.blue);
+    }//GEN-LAST:event_btnVitalCreateMouseEntered
+
+    private void btnVitalCreateMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVitalCreateMouseExited
+        // TODO add your handling code here:
+        btnVitalCreate.setForeground(Color.black);
+    }//GEN-LAST:event_btnVitalCreateMouseExited
+
+    private void btnVitalViewMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVitalViewMouseEntered
+        // TODO add your handling code here:
+        btnVitalView.setForeground(Color.blue);
+    }//GEN-LAST:event_btnVitalViewMouseEntered
+
+    private void btnVitalViewMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVitalViewMouseExited
+        // TODO add your handling code here:
+        btnVitalView.setForeground(Color.black);
+    }//GEN-LAST:event_btnVitalViewMouseExited
+
+    private void btnEncountCreateMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEncountCreateMouseEntered
+        // TODO add your handling code here:
+        btnEncountCreate.setForeground(Color.blue);
+    }//GEN-LAST:event_btnEncountCreateMouseEntered
+
+    private void btnEncountCreateMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEncountCreateMouseExited
+        // TODO add your handling code here:
+        
+        btnEncountCreate.setForeground(Color.black);
+    }//GEN-LAST:event_btnEncountCreateMouseExited
+
+    private void btnEncountViewMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEncountViewMouseExited
+        // TODO add your handling code here:
+        btnEncountView.setForeground(Color.blue);
+    }//GEN-LAST:event_btnEncountViewMouseExited
+
+    private void btnEncountViewMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEncountViewMouseEntered
+        // TODO add your handling code here:
+        btnEncountView.setForeground(Color.blue);
+    }//GEN-LAST:event_btnEncountViewMouseEntered
+
+    private void btnLogoutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLogoutMouseExited
+        // TODO add your handling code here:
+        btnLogout.setForeground(Color.blue);
+    }//GEN-LAST:event_btnLogoutMouseExited
+
+    private void btnLogoutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLogoutMouseEntered
+        // TODO add your handling code here:
+        btnLogout.setForeground(Color.red);
+    }//GEN-LAST:event_btnLogoutMouseEntered
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

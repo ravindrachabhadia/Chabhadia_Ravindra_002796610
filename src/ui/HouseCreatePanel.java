@@ -45,6 +45,9 @@ public class HouseCreatePanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         TextHouseId = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(0, 153, 204));
+
+        btnSubmit.setBackground(new java.awt.Color(255, 102, 102));
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -4,6 +4,7 @@
  */
 package ui;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import models.DoctorStore;
@@ -111,6 +112,8 @@ public class VitalSignsViewPanel extends javax.swing.JPanel {
         TextVitalSignsDate = new javax.swing.JTextField();
         btnSubmit = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(0, 153, 153));
+
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("View Vital Signs");
@@ -147,14 +150,32 @@ public class VitalSignsViewPanel extends javax.swing.JPanel {
             tblResources.getColumnModel().getColumn(8).setResizable(false);
         }
 
+        btnView.setBackground(new java.awt.Color(51, 204, 0));
         btnView.setText("View");
+        btnView.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnViewMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnViewMouseExited(evt);
+            }
+        });
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewActionPerformed(evt);
             }
         });
 
+        btnDelete.setBackground(new java.awt.Color(255, 0, 0));
         btnDelete.setText("Delete");
+        btnDelete.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnDeleteMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnDeleteMouseExited(evt);
+            }
+        });
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteActionPerformed(evt);
@@ -185,7 +206,16 @@ public class VitalSignsViewPanel extends javax.swing.JPanel {
 
         jLabel10.setText("Date");
 
+        btnSubmit.setBackground(new java.awt.Color(255, 102, 102));
         btnSubmit.setText("Submit");
+        btnSubmit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnSubmitMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnSubmitMouseExited(evt);
+            }
+        });
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
@@ -399,6 +429,36 @@ public class VitalSignsViewPanel extends javax.swing.JPanel {
         addDataToTableFromStore();
         
     }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void btnSubmitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSubmitMouseEntered
+        // TODO add your handling code here:
+        btnSubmit.setForeground(Color.blue);
+    }//GEN-LAST:event_btnSubmitMouseEntered
+
+    private void btnSubmitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSubmitMouseExited
+        // TODO add your handling code here:
+        btnSubmit.setForeground(Color.black);
+    }//GEN-LAST:event_btnSubmitMouseExited
+
+    private void btnViewMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewMouseEntered
+        // TODO add your handling code here:
+        btnView.setForeground(Color.blue);
+    }//GEN-LAST:event_btnViewMouseEntered
+
+    private void btnViewMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewMouseExited
+        // TODO add your handling code here:
+        btnView.setForeground(Color.black);
+    }//GEN-LAST:event_btnViewMouseExited
+
+    private void btnDeleteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDeleteMouseEntered
+        // TODO add your handling code here:
+        btnDelete.setForeground(Color.blue);
+    }//GEN-LAST:event_btnDeleteMouseEntered
+
+    private void btnDeleteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDeleteMouseExited
+        // TODO add your handling code here:
+        btnDelete.setForeground(Color.black);
+    }//GEN-LAST:event_btnDeleteMouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

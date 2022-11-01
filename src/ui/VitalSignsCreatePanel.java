@@ -4,6 +4,7 @@
  */
 package ui;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
@@ -118,6 +119,8 @@ public class VitalSignsCreatePanel extends javax.swing.JPanel {
         hospitalComboBox = new javax.swing.JComboBox<>();
         doctorComboBox = new javax.swing.JComboBox<>();
 
+        setBackground(new java.awt.Color(0, 204, 204));
+
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Create Vital Signs");
@@ -146,7 +149,16 @@ public class VitalSignsCreatePanel extends javax.swing.JPanel {
             }
         });
 
+        btnSubmit.setBackground(new java.awt.Color(255, 102, 102));
         btnSubmit.setText("Submit");
+        btnSubmit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnSubmitMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnSubmitMouseExited(evt);
+            }
+        });
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
@@ -385,6 +397,18 @@ public class VitalSignsCreatePanel extends javax.swing.JPanel {
         doctorComboBox.setModel(new DefaultComboBoxModel<>(comRoles));
         
     }//GEN-LAST:event_hospitalComboBoxActionPerformed
+
+    private void btnSubmitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSubmitMouseEntered
+        // TODO add your handling code here:
+        
+        btnSubmit.setForeground(Color.blue);
+    }//GEN-LAST:event_btnSubmitMouseEntered
+
+    private void btnSubmitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSubmitMouseExited
+        // TODO add your handling code here:
+        
+        btnSubmit.setForeground(Color.black);
+    }//GEN-LAST:event_btnSubmitMouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

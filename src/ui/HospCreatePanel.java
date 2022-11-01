@@ -4,6 +4,7 @@
  */
 package ui;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 import models.CityStore;
 import models.CommunityStore;
@@ -53,7 +54,16 @@ public class HospCreatePanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(0, 204, 204));
 
+        btnSubmit.setBackground(new java.awt.Color(255, 102, 102));
         btnSubmit.setText("Submit");
+        btnSubmit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnSubmitMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnSubmitMouseExited(evt);
+            }
+        });
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
@@ -144,6 +154,17 @@ public class HospCreatePanel extends javax.swing.JPanel {
         TextHospName.setText("");
         TextPassword.setText("");
     }//GEN-LAST:event_btnSubmitActionPerformed
+
+    private void btnSubmitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSubmitMouseEntered
+        // TODO add your handling code here:
+        btnSubmit.setForeground(Color.blue);
+    }//GEN-LAST:event_btnSubmitMouseEntered
+
+    private void btnSubmitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSubmitMouseExited
+        // TODO add your handling code here:
+        
+        btnSubmit.setForeground(Color.black);
+    }//GEN-LAST:event_btnSubmitMouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

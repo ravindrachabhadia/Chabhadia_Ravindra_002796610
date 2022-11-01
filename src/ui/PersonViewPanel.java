@@ -4,6 +4,7 @@
  */
 package ui;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import models.HouseStore;
@@ -96,6 +97,8 @@ public class PersonViewPanel extends javax.swing.JPanel {
         TextPersonEmail = new javax.swing.JTextField();
         btnSubmit = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(0, 204, 204));
+
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("View Person Panel");
@@ -113,6 +116,7 @@ public class PersonViewPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblResources);
 
+        btnView.setBackground(new java.awt.Color(51, 204, 0));
         btnView.setText("View");
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,6 +124,7 @@ public class PersonViewPanel extends javax.swing.JPanel {
             }
         });
 
+        btnDelete.setBackground(new java.awt.Color(255, 0, 0));
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,7 +152,16 @@ public class PersonViewPanel extends javax.swing.JPanel {
 
         jLabel10.setText("House ID");
 
+        btnSubmit.setBackground(new java.awt.Color(255, 102, 102));
         btnSubmit.setText("Submit");
+        btnSubmit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnSubmitMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnSubmitMouseExited(evt);
+            }
+        });
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
@@ -352,6 +366,18 @@ public class PersonViewPanel extends javax.swing.JPanel {
         addDataToTableFromStore();
         
     }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void btnSubmitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSubmitMouseExited
+        // TODO add your handling code here:
+        
+        btnSubmit.setForeground(Color.blue);
+    }//GEN-LAST:event_btnSubmitMouseExited
+
+    private void btnSubmitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSubmitMouseEntered
+        // TODO add your handling code here:
+        
+        btnSubmit.setForeground(Color.black);
+    }//GEN-LAST:event_btnSubmitMouseEntered
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

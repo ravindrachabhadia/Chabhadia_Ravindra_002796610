@@ -77,6 +77,8 @@ public class BackPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(0, 102, 204));
 
+        btnBack.setBackground(new java.awt.Color(0, 102, 102));
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

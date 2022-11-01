@@ -29,7 +29,7 @@ public class PersonCreatePanel extends javax.swing.JPanel {
     HouseStore houseStore;
     models.SystemAdmin systemAdmin;
     CommunityStore communityStore;
-    
+  
     public PersonCreatePanel(PersonStore personStore, HouseStore houseStore, models.SystemAdmin systemAdmin, CommunityStore communityStore) {
         initComponents();
         
@@ -69,6 +69,10 @@ public class PersonCreatePanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jCalendar1 = new com.toedter.calendar.JCalendar();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        jCalendar2 = new com.toedter.calendar.JCalendar();
+        DC = new com.toedter.calendar.JDateChooser();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         TextPersonAddress = new javax.swing.JTextField();
@@ -129,6 +133,12 @@ public class PersonCreatePanel extends javax.swing.JPanel {
 
         jLabel7.setText("Email");
 
+        TextPersonDOB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextPersonDOBActionPerformed(evt);
+            }
+        });
+
         jLabel8.setText("Phone Number");
 
         jLabel9.setText("Address");
@@ -143,7 +153,16 @@ public class PersonCreatePanel extends javax.swing.JPanel {
 
         jLabel11.setText("Password");
 
+        btnSubmit.setBackground(new java.awt.Color(255, 102, 102));
         btnSubmit.setText("Submit");
+        btnSubmit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnSubmitMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnSubmitMouseExited(evt);
+            }
+        });
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
@@ -256,6 +275,62 @@ public class PersonCreatePanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+        
+        String FirstName;
+        if(TextPersonFirstName.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Please Fill Name details");
+            return;
+            
+        }
+        else{
+            FirstName = TextPersonFirstName.getText();
+        }
+        String LastName;
+        if(TextPersonLastName.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Please Fill Name details");
+            return;
+            
+        }
+        else{
+            LastName = TextPersonLastName.getText();
+        }
+        
+        int Pid;
+        try{
+            Pid = Integer.parseInt(TextPersonId.getText());
+        }
+        catch(NumberFormatException e){
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Please enter correct ID");
+            return;
+        }
+        
+        int age;
+        try{
+            age = Integer.parseInt(TextPersonPassword.getText());
+        }
+        catch(NumberFormatException e){
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Please enter correct Age");
+            return;
+        }
+        
+        int phone;
+        if(String.valueOf(TextPersonPhoneNumber.getText()).length() == 9 ){
+            try{
+                phone = Integer.parseInt(TextPersonPhoneNumber.getText());
+            }
+            catch(NumberFormatException e){
+                e.printStackTrace();
+                JOptionPane.showMessageDialog(null, "Please enter correct  Number");
+                return;
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Please enter correct Phone Number");
+                return;
+        }
+        
         
        Person resource = personStore.addNewResource(); 
        
@@ -378,8 +453,25 @@ public class PersonCreatePanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_TextPersonLastNameKeyPressed
 
+    private void btnSubmitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSubmitMouseEntered
+        // TODO add your handling code here:
+        
+        btnSubmit.setForeground(Color.blue);
+    }//GEN-LAST:event_btnSubmitMouseEntered
+
+    private void btnSubmitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSubmitMouseExited
+        // TODO add your handling code here:
+        
+        btnSubmit.setForeground(Color.black);
+    }//GEN-LAST:event_btnSubmitMouseExited
+
+    private void TextPersonDOBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextPersonDOBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextPersonDOBActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.toedter.calendar.JDateChooser DC;
     private javax.swing.JTextField TextHouseId;
     private javax.swing.JTextField TextPersonAddress;
     private javax.swing.JTextField TextPersonDOB;
@@ -392,6 +484,9 @@ public class PersonCreatePanel extends javax.swing.JPanel {
     private javax.swing.JTextField TextPersonPhoneNumber;
     private javax.swing.JButton btnSubmit;
     private javax.swing.JComboBox<String> communityCombo;
+    private com.toedter.calendar.JCalendar jCalendar1;
+    private com.toedter.calendar.JCalendar jCalendar2;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
